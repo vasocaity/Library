@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25F359B1-8ABC-4345-9868-2298E3F28ED8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication2_Lab4</RootNamespace>
+    <AssemblyName>ระบบยืมคืนหนังสือ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>21996554D1A7077ED64120705CA9F0B5128F37E6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Window_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.7\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.7\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fine.cs" />
+    <Compile Include="Listbook.cs" />
+    <Compile Include="ListOrder.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Borrow.cs" />
+    <Compile Include="BookDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookDetail.Designer.cs">
+      <DependentUpon>BookDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookBorrow.Designer.cs">
+      <DependentUpon>BookBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian.cs" />
+    <Compile Include="MemberDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberDetail.Designer.cs">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BookReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReturn.Designer.cs">
+      <DependentUpon>BookReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs" />
+    <Compile Include="ReportBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBorrow.Designer.cs">
+      <DependentUpon>ReportBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Return.cs" />
+    <EmbeddedResource Include="BookDetail.resx">
+      <DependentUpon>BookDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookBorrow.resx">
+      <DependentUpon>BookBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberDetail.resx">
+      <DependentUpon>MemberDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookReturn.resx">
+      <DependentUpon>BookReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBorrow.resx">
+      <DependentUpon>ReportBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonArray.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonBinaryData.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonBoolean.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonConstants.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonDateTime.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonDefaults.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonDocumentWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonDouble.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonElement.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonExtensionMethods.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonInt32.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonInt64.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonInternalException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonJavaScript.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonJavaScriptWithScope.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonMaxKey.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonMinKey.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonNull.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonObjectId.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonRegularExpression.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonSerializationException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonString.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonSymbol.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonSymbolTable.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonTimestamp.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonTypeMapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonTypeMapperOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonUndefined.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonUtils.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.BsonValue.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.GuidConverter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IConvertibleToBsonDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.ICustomBsonTypeMapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBinaryReader.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBinaryReaderBookmark.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBinaryReaderSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBinaryWriter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBinaryWriterSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonBuffer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonDocumentReader.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonDocumentReaderBookmark.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonDocumentReaderSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonDocumentWriter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonDocumentWriterSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonReader.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonReaderBookmark.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonReaderSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonWriter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.BsonWriterSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.DateTimeJsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.DoubleJsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.Int32JsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.Int64JsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonBuffer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonReader.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonReaderBookmark.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonReaderSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonScanner.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonWriter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.JsonWriterSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.ObjectIdJsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.RegularExpressionJsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.IO.StringJsonToken.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.ObjectId.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonDateTimeOptionsAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonDefaultValueAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonDictionaryOptionsAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonDiscriminatorAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonExtraElementsAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonIdAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonIgnoreAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonIgnoreExtraElementsAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfDefaultAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfNullAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonKnownTypesAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonRequiredAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonSerializationOptionsAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Attributes.BsonSerializerAttribute.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonClassMap.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonClassMapSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonDocumentBackedClass.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonMemberMap.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonSerializationInfo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.BsonSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.AlwaysIgnoreExtraElementsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.AlwaysIgnoreIfDefaultConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.AlwaysIgnoreIfNullConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.AlwaysSerializeDefaultValueConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.CamelCaseElementNameConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.ConventionProfile.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.HierarchicalDiscriminatorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IDefaultValueConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IDiscriminatorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IElementNameConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IExtraElementsMemberConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IIdGeneratorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IIdMemberConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IIgnoreExtraElementsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IIgnoreIfDefaultConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IIgnoreIfNullConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.IMemberFinderConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.ISerializationOptionsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.ISerializeDefaultValueConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.LookupIdGeneratorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.MemberNameElementNameConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NamedExtraElementsMemberConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NamedIdMemberConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NeverIgnoreExtraElementsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NeverIgnoreIfDefaultConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NeverIgnoreIfNullConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NeverSerializeDefaultValueConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NullDefaultValueConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.NullSerializationOptionsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.PublicMemberFinderConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.ScalarDiscriminatorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.StandardDiscriminatorConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Conventions.TypeRepresentationSerializationOptionsConvention.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonArraySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonClassMapModifier.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonDocumentSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonIdProvider.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonMemberMapModifier.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonSerializable.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonSerializationProvider.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IBsonSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.BsonBinaryDataGuidGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.BsonObjectIdGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.CombGuidGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.GuidGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.NullIdChecker.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.ObjectIdGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IdGenerators.StringObjectIdGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.IIdGenerator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.ArraySerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.BsonBaseSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.DateTimeSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.DictionarySerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.DocumentSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.KeyValuePairSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.RepresentationSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Options.TimeSpanSerializationOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BitArraySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BitmapSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BooleanSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonArraySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonBaseSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonBinaryDataSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonBooleanSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonDateTimeSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonDocumentSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonDocumentWrapperSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonDoubleSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonIBsonSerializableSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonInt32Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonInt64Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonJavaScriptSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonJavaScriptWithScopeSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonMaxKeySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonMinKeySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonNullSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonObjectIdSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonRegularExpressionSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonStringSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonSymbolSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonTimestampSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonUndefinedSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.BsonValueSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.ByteArraySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.ByteSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.CharSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.CultureInfoSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DateTimeOffsetSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DateTimeSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DecimalSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DictionarySerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DoubleSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.DrawingSizeSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.EnumerableSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.EnumSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.GuidSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.ImageSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.Int16Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.Int32Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.Int64Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.IPAddressSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.IPEndPointSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.ObjectIdSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.ObjectSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.QueueSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.SByteSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.SingleSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.StackSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.StringSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.TimeSpanSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.UInt16Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.UInt32Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.UInt64Serializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.UriSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.Serializers.VersionSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.Serialization.TypeNameDiscriminator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Bson.TruncationException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.AggregateResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.BuilderBase.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.CollectionOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.CollectionOptionsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.DeprecatedQuery.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.DeprecatedQueryBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.Fields.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.FieldsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GeoHaystackSearchOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GeoHaystackSearchOptionsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GeoNearOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GeoNearOptionsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GroupBy.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.GroupByBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.IndexKeys.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.IndexKeysBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.IndexOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.IndexOptionsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.MapReduceOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.MapReduceOptionsBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.MapReduceOutput.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.Query.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.QueryComplete.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.QueryConditionList.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.QueryNot.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.QueryNotConditionList.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.SortBy.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.SortByBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.Update.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Builders.UpdateBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CanCommandBeSentToSecondary.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CollectionOptionsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CollectionStatsResult+IndexSizesResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CollectionStatsResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CommandDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.CommandResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.DatabaseStatsResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.FieldsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.FindAndModifyResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoHaystackSearchOptionsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoHaystackSearchResult+GeoHaystackSearchHit.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoHaystackSearchResult+GeoHaystackSearchHits.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoHaystackSearchResult+GeoHaystackSearchStats.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoHaystackSearchResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoNearOptionsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoNearResult+GeoNearHit.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoNearResult+GeoNearHits.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoNearResult+GeoNearStats.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GeoNearResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GetIndexesResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GetLastErrorResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GetProfilingLevelResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFS.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFSCreateOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFSException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFSFileInfo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFSSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GridFS.MongoGridFSStream.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.GroupByDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoCollectionOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoCommand.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoFields.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoGeoHaystackSearchOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoGeoNearOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoGroupBy.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoIndexKeys.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoIndexOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoMapReduceOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoQuery.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoScope.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoSortBy.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IMongoUpdate.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IndexInfo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IndexKeysDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IndexOptionsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Internal.IndexCache.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Internal.MongoConnection.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Internal.MongoConnectionPool.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.IsMasterResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.ExpressionFormatter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.ExpressionNormalizer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.ExpressionParameterReplacer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.ExpressionPrettyPrinter.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.ExpressionVisitor.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.LinqExtensionMethods.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.LinqToMongo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.MongoQueryProvider.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.MongoQueryTranslator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.OrderByClause.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.PartialEvaluator.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.SelectQuery.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Linq.TranslatedQuery.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MapReduceOptionsDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MapReduceResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoAuthenticationException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoClient.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoClientSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCollection.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCollectionSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCommandException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoConnectionException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCredentials.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCredentialsStore.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoCursor.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoDatabase.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoDatabaseSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoDBRef.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoDBRefSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoDefaults.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoInsertOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoInternalException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoQueryException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoSafeModeException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoServer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoServerAddress.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoServerBuildInfo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoServerInstance.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoServerSettings.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoUpdateOptions.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoUrl.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoUrlBuilder.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoUser.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.MongoUtils.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.QueryDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ReadPreference.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ReplicaSetTag.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ReplicaSetTagSet.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SafeMode.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SafeModeResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ScopeDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SortByDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileInfo.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileInfoSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileLockStatistics.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileLockStatisticsSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileReadWriteLockStatistics.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.SystemProfileReadWriteLockStatisticsSerializer.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.UpdateDocument.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ValidateCollectionResult+ExtentDetails.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.ValidateCollectionResult.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.BaseWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.CollectionOptionsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.CommandWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.FieldsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.GeoHaystackSearchOptionsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.GeoNearOptionsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.GroupByWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.IndexKeysWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.IndexOptionsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.MapReduceOptionsWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.QueryWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.ScopeWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.SortByWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.Wrappers.UpdateWrapper.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcern+WCount.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcern+WMode.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcern+WValue.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcern.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcernException.datasource" />
+    <None Include="Properties\DataSources\MongoDB.Driver.WriteConcernResult.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Window_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
